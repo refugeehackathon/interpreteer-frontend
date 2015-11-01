@@ -16,20 +16,40 @@ var Backend;
                     { avatar: basePath.img + 'example-bg.png', title: 'Unterstützung (Dolmetscher) Vostellungsgespräch', summary: 'Sprachen: arabisch, englisch' }
                 ],
                 requests: [
-                    { title: 'Übersetzung Bafög-Antrag', summary: '10117 Berlin' },
-                    { title: 'Unterstützung Elternabend (Kindergarten)', summary: '14478 Potsdam' }
+                    { title: 'Übersetzung Bafög-Antrag', description: '10117 Berlin' },
+                    { title: 'Unterstützung Elternabend (Kindergarten)', description: '14478 Potsdam' }
+                ],
+                matchingRequests: [
+                    { title: 'Übersetzung Bafög-Antrag', description: '10117 Berlin' },
+                    { title: 'Unterstützung Elternabend (Kindergarten)', description: '14478 Potsdam' }
                 ]
             };
         }
         Api.prototype.postData = function (model, data, onSuccess) {
-            $.post(basePath.api + model, JSON.stringify(data), function (response) {
-                onSuccess(data);
-            }, "json");
+            onSuccess({ status: 'success' });
+
+            return;
+
+            $.ajax(basePath.api + model + '/', {
+                type: 'POST',
+                data: JSON.stringify(data),
+                processData: false,
+                contentType: 'application/json',
+                success: function (response) {
+                    onSuccess(data);
+                }
+            });
         };
 
         Api.prototype.getData = function (model, onSuccess, onError) {
             var _this = this;
             if (typeof onError === "undefined") { onError = null; }
+            if (model == "offers" || model == "matchingOffers" || model == "matchingRequests") {
+                onSuccess(this.dummy[model]);
+
+                return;
+            }
+
             var url = basePath.api + model + '/?format=json';
 
             $.ajax({

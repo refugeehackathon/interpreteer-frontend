@@ -59,6 +59,7 @@ class App {
 		this.api.getData('offers', (result) => { this.offers(result); });
 
 		this.api.getData('matchingOffers', (result) => { this.matchingOffers(result); });
+		this.api.getData('matchingRequests', (result) => { this.matchingRequests(result); });
 
 		this.api.getData('users', (result) => { this.user(result[0]); });
 	}
@@ -85,7 +86,20 @@ class App {
 		//grab form data as JSON here
 		var formData = (<any>$('#wf-form-request-form')).serializeJSON();
 
-		this.api.postData('request', formData, (result: any) => {
+		$.extend(formData, {
+			"location": {
+				"location": "",
+				"zip_code": formData.zipcode
+			},
+			"kind": "0",
+			"start_time": "2015-11-01T10:00:00",
+			"end_time": "2015-11-01T18:00:00",
+			"direction": "2",
+			"required_language": "en",
+			"known_languages": ["en", "de" , "fr"]
+		});
+
+		this.api.postData('requests', formData, (result: any) => {
 
 			if (result.status == 'success') {
 				this.goto('offers')
@@ -105,7 +119,7 @@ class App {
 			"end_time": "2015-11-01 18:00"
 		});
 
-		this.api.postData('offer', formData, (result: any) => {
+		this.api.postData('offers', formData, (result: any) => {
 
 			if (result.status == 'success') {
 				this.goto('requests')

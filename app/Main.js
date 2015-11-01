@@ -40,6 +40,9 @@ var App = (function () {
         this.api.getData('matchingOffers', function (result) {
             _this.matchingOffers(result);
         });
+        this.api.getData('matchingRequests', function (result) {
+            _this.matchingRequests(result);
+        });
 
         this.api.getData('users', function (result) {
             _this.user(result[0]);
@@ -67,7 +70,20 @@ var App = (function () {
         //grab form data as JSON here
         var formData = $('#wf-form-request-form').serializeJSON();
 
-        this.api.postData('request', formData, function (result) {
+        $.extend(formData, {
+            "location": {
+                "location": "",
+                "zip_code": formData.zipcode
+            },
+            "kind": "0",
+            "start_time": "2015-11-01T10:00:00",
+            "end_time": "2015-11-01T18:00:00",
+            "direction": "2",
+            "required_language": "en",
+            "known_languages": ["en", "de", "fr"]
+        });
+
+        this.api.postData('requests', formData, function (result) {
             if (result.status == 'success') {
                 _this.goto('offers');
             }
@@ -86,7 +102,7 @@ var App = (function () {
             "end_time": "2015-11-01 18:00"
         });
 
-        this.api.postData('offer', formData, function (result) {
+        this.api.postData('offers', formData, function (result) {
             if (result.status == 'success') {
                 _this.goto('requests');
             }

@@ -23,8 +23,13 @@ module Backend {
 			],
 
 			requests: [
-				{ title: 'Übersetzung Bafög-Antrag', summary: '10117 Berlin' },
-				{ title: 'Unterstützung Elternabend (Kindergarten)', summary: '14478 Potsdam' }
+				{ title: 'Übersetzung Bafög-Antrag', description: '10117 Berlin' },
+				{ title: 'Unterstützung Elternabend (Kindergarten)', description: '14478 Potsdam' }
+			],
+
+			matchingRequests: [
+				{ title: 'Übersetzung Bafög-Antrag', description: '10117 Berlin' },
+				{ title: 'Unterstützung Elternabend (Kindergarten)', description: '14478 Potsdam' }
 			]
 		}
 
@@ -32,12 +37,31 @@ module Backend {
 		}
 
 		postData(model: string, data: any, onSuccess: Function) {
-			$.post(basePath.api + model, JSON.stringify(data), (response) => {
-				onSuccess(data);
-			}, "json")
+
+			onSuccess({status: 'success'});
+
+			return;
+
+			$.ajax(
+				basePath.api + model + '/',
+				{
+					type: 'POST',
+					data: JSON.stringify(data),
+					processData: false,
+					contentType: 'application/json',
+					success: (response) => { onSuccess(data); }
+				});
 		}
 
 		getData(model: String, onSuccess: Function, onError: Function = null) {
+
+			//return dummy data until backend is properly implemented
+			if (model == "offers" || model == "matchingOffers" || model == "matchingRequests") {
+
+				onSuccess(this.dummy[model]);
+
+				return;
+			}
 
 			var url: string = basePath.api + model + '/?format=json';
 
