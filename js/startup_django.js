@@ -4,7 +4,7 @@
 var basePath = {
 	data: 'data/',
 	img: 'images/',
-	api: 'https://interpreteer.herokuapp.com/'
+	api: 'api/'
 };
 
 require(['jquery', 'knockout-3.3.0', 'serializejson', 'app/Backend', 'app/Main', 'domReady!'], function ($, ko) {
