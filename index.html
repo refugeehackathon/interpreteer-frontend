@@ -2,36 +2,36 @@
 <!-- This site was created in Webflow. http://www.webflow.com-->
 <html>
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
   <title>interpreteer</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="generator" content="Webflow">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/webflow.css">
-	<link rel="stylesheet" type="text/css" href="css/interpreteer.webflow.css">
-	<script src="js/webfont.js"></script>
-	<script>
-		WebFont.load({
-			google: {
-				families: ["Roboto:300,regular,500,700"]
-			}
-		});
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Webflow">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/interpreteer.webflow.css">
+  <script src="js/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Roboto:300,regular,500,700"]
+      }
+    });
   </script>
-	<script type="text/javascript" src="js/modernizr.js"></script>
-	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
-	<link rel="apple-touch-icon" href="css/img/webclip.png">
-	<style type="text/css">
-		.ellipsis {
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			max-height: auto;
-		}
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="css/img/webclip.png">
+  <style type="text/css">
+    .ellipsis {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-height: auto;
+    }
     @media screen and (min-width: 1200px) { .w-container { max-width: 1170px; } }
-	</style>
+  </style>
 
-	<!-- load custom app logic -->
-	<script async data-main="js/startup" src="js/require.js"></script>
+  <!-- load custom app logic -->
+  <script async data-main="js/startup" src="js/require.js"></script>
 
 </head>
 <body>
@@ -49,15 +49,15 @@
   </div>
   <header class="w-section header-area">
     <div class="w-container header-content">
-			<div class="w-nav" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
+      <div class="w-nav" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
         <div class="w-container app-bar"><img class="nav-logo" src="images/logo_interpreteer.png"><a class="w-button settings-btn app-bar-menu hidden" href="#" data-ix="show-dialog-01"></a><a class="w-button search-button app-bar-menu hidden" href="#" id="search-button01" data-ix="show-searchbar"></a>
           <nav class="w-nav-menu nav-menu" role="navigation"><a class="w-nav-link nav-link" href="index.html">Home</a><a class="w-nav-link nav-link" href="#">FAQ</a><a class="w-nav-link nav-link" href="#">Hilfe</a>
-					</nav>
-					<div class="w-nav-button menu-button">
-						<div class="w-icon-nav-menu"></div>
-					</div>
-				</div>
-			</div>
+          </nav>
+          <div class="w-nav-button menu-button">
+            <div class="w-icon-nav-menu"></div>
+          </div>
+        </div>
+      </div>
       <div class="w-row hero-image">
         <div class="w-col w-col-4 w-col-small-4 header-column"><img class="header-image" src="images/icon_1.png">
           <h3 class="header-text">Übersetzer nötig?</h3>
@@ -69,16 +69,15 @@
           <h3 class="header-text">Interpreteer finden!</h3>
         </div>
       </div>
-		</div>
-	</header>
+    </div>
+  </header>
   <main class="w-section content-area">
     <div class="w-container page-content">
       <div class="w-tabs" data-duration-in="150" data-duration-out="150">
         <div class="w-tab-menu tabs-menu">
           <a class="w-tab-link w-inline-block tab w--current" data-w-tab="Gesuche">
             <div>Gesuch aufgeben</div>
-          </a>
-          <a class="w-tab-link w-inline-block tab" data-w-tab="Angebote">
+          </a><a class="w-tab-link w-inline-block tab" data-w-tab="Angebote">
             <div>Interpreteer werden</div>
           </a>
         </div>
@@ -108,8 +107,7 @@
                         <option value="german">Deutsch</option>
                         <option value="english">Englisch</option>
                         <option value="arabic">Arabisch</option>
-                      </select>
-                      <select class="w-select language-selector2 form-select" id="base_language" name="base_language" data-name="base_language" required="required">
+                      </select><select class="w-select language-selector2 form-select" id="base_language" name="base_language" data-name="base_language" required="required">
                         <option value="">Ausgangssprache wählen...</option>
                         <option value="arabisch">Arabisch</option>
                         <option value="german">Deutsch</option>
@@ -199,8 +197,8 @@
       </div>
     </div>
   </main>
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/webflow.js"></script>
-	<!--[if lte IE 9]><script src="js/placeholders.min.js"></script><![endif]-->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
+  <!--[if lte IE 9]><script src="js/placeholders.min.js"></script><![endif]-->
 </body>
 </html>
