@@ -26,6 +26,9 @@
         this.api = new Backend.Api();
 
         this.api.getData('requests', function (result) {
+            for (var i = 0; i < result.length; ++i) {
+                result[i].required_language = getLanguageName(result[i].required_language);
+            }
             _this.requests(result);
         });
         this.api.getData('offers', function (result) {
