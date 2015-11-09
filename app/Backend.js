@@ -46,13 +46,13 @@
         Api.prototype.getData = function (model, onSuccess, onError) {
             var _this = this;
             if (typeof onError === "undefined") { onError = null; }
-            if (model == "offers" || model == "matchingOffers" || model == "matchingRequests") {
+            if (model == "matchingOffers" || model == "matchingRequests") {
                 onSuccess(this.dummy[model]);
 
                 return;
             }
 
-            var url = basePath.api + model + '/?format=json';
+            var url = "/" + basePath.api + model + '/?format=json';
 
             $.ajax({
                 url: url,

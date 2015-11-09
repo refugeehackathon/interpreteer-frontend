@@ -10,9 +10,9 @@
 
                 <h3 class="pb25">Angebote /&nbsp;Ergebnisse im Überblick</h3>
 
-                <div class="w-dyn-list">
-                    <div class="w-dyn-items w-row" data-bind="foreach: matchingOffers">
-                        <div class="w-dyn-item w-col w-col-6">
+                <div class="w-dyn-list" data-bind="foreach: offers">
+                    <div class="w-dyn-items w-row" >
+                        <div class="w-dyn-item w-col w-col-12">
                             <div class="w-clearfix list-item-offer">
                                 <div class="list-item-contact-image" data-ix="image-fade-in"
                                      data-bind="style:{'backgroundImage': 'url(' + avatar + ')' }"></div>
@@ -29,12 +29,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-dyn-empty offers-empty-state">
+                    <!-- <div class="w-dyn-empty offers-empty-state">
                         <p>Leider können wir noch kein passendes Angebot finden.
                             <br>
                             <br><span class="fw400">Sie erhalten eine E-Mail Benachrichtigung, sobald ein Angebot verfügbar ist.</span>
                         </p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
