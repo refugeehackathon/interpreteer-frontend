@@ -35,7 +35,7 @@
             _this.offers(result);
         });
 
-        this.api.getData('matchingOffers', function (result) {
+        this.api.getData('requests/1/matchings', function (result) {
             _this.matchingOffers(result);
         });
         this.api.getData('matchingRequests', function (result) {
@@ -83,7 +83,7 @@
 
         this.api.postData('requests', formData, function (result) {
             if (result.status == 'success') {
-                _this.goto('offers');
+                _this.goto('matchingOffers', 1);
             }
         });
     };
@@ -105,7 +105,7 @@
         });
     };
 
-    App.prototype.goto = function (url) {
+    App.prototype.goto = function (url, id) {
         document.location.pathname = "/" + url;
     };
     return App;

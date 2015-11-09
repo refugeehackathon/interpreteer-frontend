@@ -46,7 +46,7 @@
         Api.prototype.getData = function (model, onSuccess, onError) {
             var _this = this;
             if (typeof onError === "undefined") { onError = null; }
-            if (model == "matchingOffers" || model == "matchingRequests") {
+            if (model == "matchingRequests") {
                 onSuccess(this.dummy[model]);
 
                 return;
