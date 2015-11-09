@@ -1,5 +1,4 @@
-﻿/// <reference path="ref/jquery/jquery.d.ts" />
-var Backend;
+﻿var Backend;
 (function (Backend) {
     var Api = (function () {
         function Api() {
@@ -28,8 +27,6 @@ var Backend;
         Api.prototype.postData = function (model, data, onSuccess) {
             onSuccess({ status: 'success' });
 
-            return;
-
             $.ajax(basePath.api + model + '/', {
                 type: 'POST',
                 data: JSON.stringify(data),
@@ -37,7 +34,12 @@ var Backend;
                 contentType: 'application/json',
                 success: function (response) {
                     onSuccess(data);
+                },
+                error: function (jqXhr, textStatus, error) {
+                    console.log(textStatus);
+                    console.log(jqXhr);
                 }
+
             });
         };
 
@@ -75,4 +77,3 @@ var Backend;
     })();
     Backend.Api = Api;
 })(Backend || (Backend = {}));
-//# sourceMappingURL=Backend.js.map

@@ -1,9 +1,4 @@
-﻿/// <reference path="ref/jquery/jquery.d.ts" />
-/// <reference path="ref/knockout/knockout.d.ts" />
-/// <reference path="ref/require.d.ts" />
-/// <reference path="Backend.ts" />
-
-var App = (function () {
+﻿var App = (function () {
     function App() {
         this.filter = ko.observable(null);
 
@@ -75,13 +70,13 @@ var App = (function () {
                 "location": "",
                 "zip_code": formData.zipcode
             },
-            "kind": "0",
-            "start_time": "2015-11-01T10:00:00",
-            "end_time": "2015-11-01T18:00:00",
-            "direction": "2",
-            "required_language": "en",
+            "kind": 0,
             "known_languages": ["en", "de", "fr"]
         });
+        formData["start_time"] = new Date(formData["start_time"]);
+
+        // TODO fixme
+        formData["end_time"] = formData["start_time"];
 
         this.api.postData('requests', formData, function (result) {
             if (result.status == 'success') {
@@ -96,8 +91,6 @@ var App = (function () {
         var formData = $('#wf-form-request-form-2').serializeJSON();
 
         $.extend(formData, {
-            "location": 10117,
-            "kind": 0,
             "start_time": "2015-11-01 10:00",
             "end_time": "2015-11-01 18:00"
         });
@@ -114,4 +107,3 @@ var App = (function () {
     };
     return App;
 })();
-//# sourceMappingURL=Main.js.map

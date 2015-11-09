@@ -29,11 +29,11 @@
                                               data-bind="submit: onSubmitRequest">
 
                                             <label class="form-label" for="title">Title</label>
-                                            <input class="w-input form-field" id="title" type="text" placeholder="Gib einen Titel ein" data-name="Title">
+                                            <input class="w-input form-field" id="title" type="text" placeholder="Gib einen Titel ein" name="title" data-name="title">
                                             <label class="form-label" for="description">Description</label>
-                                            <input class="w-input form-field" id="description" type="text" placeholder="Gib eine Beschreibung ein" data-name="Description">
+                                            <input class="w-input form-field" id="description" type="text" placeholder="Gib eine Beschreibung ein" name="description" data-name="description">
                                             <label class="form-label" for="unknown_lang">Benötigte Sprache</label>
-                                            <select class="w-select form-select" id="unknown_lang" name="unknown_lang" data-name="unknown_lang" required="required">
+                                            <select class="w-select form-select" id="unknown_lang" name="required_language" data-name="required_language" required="required">
                                               <option value="">Bitte wählen</option>
                                               {% get_current_language as LANGUAGE_CODE %}
                                               {% for lang in LANGUAGES %}
@@ -41,15 +41,15 @@
                                               {% endfor %}
                                             </select>
                                             <label class="form-label" for="direction">Übersetzungsrichtung</label>
-                                            <select class="w-select direction-selector form-select" id="direction" required="required">
+                                            <select class="w-select direction-selector form-select" id="direction" required="required" name="direction" data-name="direction">
                                                 <option value="0">Aus unbekannter Sprache übersetzen</option>
                                                 <option value="1">In unbekannte Sprache übersetzen</option>
                                                 <option value="2">In beide Richtungen übersetzen</option>
                                             </select>
                                             <label class="form-label" for="presence">Anwesenheit erforderlich</label>
-                                            <input class="w-checkbox" type="checkbox" name="presence" value="0" id="presence">
-                                            <label class="form-label" for="request_date">Date</label>
-                                            <input type="date" class="w-input form-field" id="request_date">
+                                            <input class="w-checkbox" type="checkbox" name="requires_presence" data-name="requires_presence" value="0" id="presence">
+                                            <label class="form-label" for="start_date">Date</label>
+                                            <input type="date" class="w-input form-field" id="start_time" name="start_time" data-name="start_time">
                                             <label class="form-label" for="zipcode">PLZ&nbsp;/ Ort</label>
                                             <input class="w-input form-field" id="zipcode" type="text"
                                                    placeholder="Postleitzahl" name="zipcode" data-name="zipcode">
