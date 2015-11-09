@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% load static from staticfiles %}
+{% load i18n %}
 
 {% block content %}
     <main class="w-section content-area">
@@ -34,6 +35,10 @@
                                             <label class="form-label" for="unknown_lang">Benötigte Sprache</label>
                                             <select class="w-select form-select" id="unknown_lang" name="unknown_lang" data-name="unknown_lang" required="required">
                                               <option value="">Bitte wählen</option>
+                                              {% get_current_language as LANGUAGE_CODE %}
+                                              {% for lang in LANGUAGES %}
+                                              <option value="{{lang.0}}">{{lang.1}}</option>
+                                              {% endfor %}
                                             </select>
                                             <label class="form-label" for="direction">Übersetzungsrichtung</label>
                                             <select class="w-select direction-selector form-select" id="direction" required="required">
