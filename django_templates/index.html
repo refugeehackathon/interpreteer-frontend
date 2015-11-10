@@ -4,164 +4,186 @@
 {% load i18n %}
 
 {% block content %}
-    <main class="w-section content-area">
-        <div class="w-container page-content">
-            <div class="w-tabs" data-duration-in="150" data-duration-out="150">
-                <div class="w-tab-menu tabs-menu">
-                    <a class="w-tab-link w-inline-block tab w--current" data-w-tab="Gesuche">
-                        <div>Gesuch aufgeben</div>
-                    </a><a class="w-tab-link w-inline-block tab" data-w-tab="Angebote">
-                        <div>Interpreteer werden</div>
-                    </a>
-                </div>
-                <div class="w-tab-content">
-                    <div class="w-tab-pane tab-gesuche w--tab-active" data-w-tab="Gesuche"
-                         data-ix="slide-in-from-right">
-                        <div>
-                            <div class="w-row">
-                                <div class="w-col w-col-6">
-                                    <h3 class="pb25">Gesuch /&nbsp;Auftrag hinzufügen</h3>
+<section id="forms">
 
-                                    <div class="w-form">
-                                        <form class="request-form" id="wf-form-request-form" name="wf-form-request-form"
-                                              data-name="request-form" method="post"
-                                              data-bind="submit: onSubmitRequest">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs nav-justified request-offer-tab" role="tablist">
+    <li role="presentation" class="active"><a href="#request" aria-controls="home" role="tab" data-toggle="tab">Gesuch aufgeben</a></li>
+    <li role="presentation"><a href="#offer" aria-controls="profile" role="tab" data-toggle="tab">Interpreteer werden</a></li>
+  </ul>
 
-                                            <label class="form-label" for="title">Title</label>
-                                            <input class="w-input form-field" id="title" type="text" placeholder="Gib einen Titel ein" name="title" data-name="title">
-                                            <label class="form-label" for="description">Description</label>
-                                            <input class="w-input form-field" id="description" type="text" placeholder="Gib eine Beschreibung ein" name="description" data-name="description">
-                                            <label class="form-label" for="unknown_lang">Benötigte Sprache</label>
-                                            <select class="w-select form-select" id="unknown_lang" name="required_language" data-name="required_language" required="required">
-                                              <option value="">Bitte wählen</option>
-                                              {% get_current_language as LANGUAGE_CODE %}
-                                              {% for lang in LANGUAGES %}
-                                              <option value="{{lang.0}}">{{lang.1}}</option>
-                                              {% endfor %}
-                                            </select>
-                                            <label class="form-label" for="direction">Übersetzungsrichtung</label>
-                                            <select class="w-select direction-selector form-select" id="direction" required="required" name="direction" data-name="direction">
-                                                <option value="0">Aus unbekannter Sprache übersetzen</option>
-                                                <option value="1">In unbekannte Sprache übersetzen</option>
-                                                <option value="2">In beide Richtungen übersetzen</option>
-                                            </select>
-                                            <label class="form-label" for="presence">Anwesenheit erforderlich</label>
-                                            <input class="w-checkbox" type="checkbox" name="requires_presence" data-name="requires_presence" value="0" id="presence">
-                                            <label class="form-label" for="start_date">Date</label>
-                                            <input type="date" class="w-input form-field" id="start_time" name="start_time" data-name="start_time">
-                                            <label class="form-label" for="zipcode">PLZ&nbsp;/ Ort</label>
-                                            <input class="w-input form-field" id="zipcode" type="text"
-                                                   placeholder="Postleitzahl" name="zipcode" data-name="zipcode">
-                                            <input class="w-button submit-button" type="submit"
-                                                   value="Mein Gesuch absenden" data-wait="Please wait...">
-                                        </form>
-                                        <div class="w-form-done form-success">
-                                            <h2 class="success-msg-title"><span class="success-msg-icon"></span> Gesuch
-                                                wurde erfolgreich übermittelt!</h2>
-                                        </div>
-                                        <div class="w-form-fail">
-                                            <p>Oops! Something went wrong while submitting the form</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w-col w-col-2"></div>
-                                <div class="w-col w-col-4">
-                                    <h3 class="latest-entries">Neueste Sucheinträge</h3>
-                                    <ul class="w-list-unstyled" data-bind="foreach: requests">
-                                        <li class="list-item">
-                                            <h4 class="list-item-text-primary" data-bind="text: title">Heading</h4>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="request">
+      <div>
+          <div class="row">
+              <div class="col-md-6">
+                  <h3 class="pb25">Gesuch /&nbsp;Auftrag hinzufügen</h3>
 
-                                            <div class="list-item-text-secondary" data-bind="text: description">This is
-                                                some text inside of a div block.
-                                            </div>
+                  <div class="form">
+                      <form class="request-form" id="wf-form-request-form" name="wf-form-request-form"
+                            data-name="request-form" method="post"
+                            data-bind="submit: onSubmitRequest">
 
-                                            <div class="list-item-text-secondary">
-                                                Zielsprache: <span data-bind="text: required_language">Sprache</span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-tab-pane tab-offers" data-w-tab="Angebote">
-                        <div>
-                            <div class="w-row">
-                                <div class="w-col w-col-6">
-                                    <h3 class="pb25">Angebot hinzufügen</h3>
+                          <div class="form-group">
+                            <label class="form-label" for="title">Title</label>
+                            <input class="w-input form-control" id="title" type="text" placeholder="Gib einen Titel ein" name="title" data-name="title">
+                          </div>
+                          <div class="form-group">
+                            <label class="form-label" for="description">Description</label>
+                            <input class="w-input form-control" id="description" type="text" placeholder="Gib eine Beschreibung ein" name="description" data-name="description">
+                          </div>
+                            <div class="form-group">
+                              <label class="form-label" for="unknown_lang">Benötigte Sprache</label>
+                            <select class="form-control" id="unknown_lang" name="required_language" data-name="required_language" required="required">
+                              <option value="">Bitte wählen</option>
+                              {% get_current_language as LANGUAGE_CODE %}
+                              {% for lang in LANGUAGES %}
+                              <option value="{{lang.0}}">{{lang.1}}</option>
+                              {% endfor %}
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label class="form-label" for="direction">Übersetzungsrichtung</label>
+                            <select class="form-control" id="direction" required="required" name="direction" data-name="direction">
+                                <option value="0">Aus unbekannter Sprache übersetzen</option>
+                                <option value="1">In unbekannte Sprache übersetzen</option>
+                                <option value="2">In beide Richtungen übersetzen</option>
+                            </select>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input  type="checkbox" name="requires_presence" data-name="requires_presence" value="0" id="presence"> Anwesenheit erforderlich
+                            </label>
+                          </div>
+                          <div class="form-group">
+                            <label class="form-label" for="start_date">Date</label>
+                            <input type="date" class="w-input form-control" id="start_time" name="start_time" data-name="start_time">
+                          </div>
+                          <div class="form-group">
+                            <label class="form-label" for="zipcode">PLZ&nbsp;/ Ort</label>
+                            <input class="w-input form-control" id="zipcode" type="text"
+                                 placeholder="Postleitzahl" name="zipcode" data-name="zipcode">
+                          </div>
 
-                                    <div class="w-form">
-                                        <form class="request-form" id="wf-form-request-form-2"
-                                              name="wf-form-request-form" data-name="request-form" method="post"
-                                              data-bind="submit: onSubmitOffer">
-                                            <select class="w-select form-select" id="offerType" name="offerType"
-                                                    data-name="offerType" required="required">
-                                                <option value="">Qualifikation</option>
-                                                <option value="translator">Übersetzer</option>
-                                                <option value="interpreter">Dolmetscher</option>
-                                            </select>
-                                            <label class="form-label" for="name-2">Name 2</label>
-                                            <input class="w-input form-field" id="name-2" type="text"
-                                                   placeholder="Enter your name" name="name-2" data-name="Name 2">
-                                            <label class="form-label" for="email-2">Email Addresse</label>
-                                            <input class="w-input form-field" id="email-2" type="email"
-                                                   placeholder="Enter your email address" name="email-2"
-                                                   data-name="Email 2">
-                                            <label class="form-label" for="primaryLanguage">Sprachen</label>
-                                            <select class="w-select form-select" id="primaryLanguage"
-                                                    name="primaryLanguage" data-name="primaryLanguage"
-                                                    required="required">
-                                                <option value="">1. Sprache</option>
-                                                <option value="german">Deutsch</option>
-                                                <option value="english">Englisch</option>
-                                                <option value="arabic">Arabisch</option>
-                                            </select>
-                                            <select class="w-select form-select" id="secondaryLanguage"
-                                                    name="secondaryLanguage" data-name="secondaryLanguage"
-                                                    required="required">
-                                                <option value="">2. Sprache</option>
-                                                <option value="german">Deutsch</option>
-                                                <option value="english">Englisch</option>
-                                                <option value="arabic">Arabisch</option>
-                                            </select>
+                          <input class="btn btn-primary btn-lg" type="submit"
+                                 value="Mein Gesuch absenden" data-wait="Please wait...">
+                      </form>
+                      <div class="w-form-done form-success">
+                          <h2 class="success-msg-title"><span class="success-msg-icon"></span> Gesuch
+                              wurde erfolgreich übermittelt!</h2>
+                      </div>
+                      <div class="w-form-fail">
+                          <p>Oops! Something went wrong while submitting the form</p>
+                      </div>
+                  </div>
+              </div>
 
-                                            <div class="w-checkbox">
-                                                <input class="w-checkbox-input" id="Beh-rdensicher-A" type="checkbox"
-                                                       name="Beh-rdensicher-A3" data-name="Behördensicher (A3)">
-                                                <label class="w-form-label" for="Beh-rdensicher-A">staatlich geprüfter
-                                                    Übersetzer</label>
-                                            </div>
-                                            <input class="w-button submit-button" type="submit"
-                                                   value="Mein Angebot eintragen" data-wait="Please wait...">
-                                        </form>
-                                        <div class="w-form-done form-success">
-                                            <h2 class="success-msg-icon"></h2>
+              <div class="col-md-4 col-md-offset-2">
+                  <h3 class="latest-entries-header">Neueste Sucheinträge</h3>
+                  <ul class="latest-entries-list" data-bind="foreach: requests">
+                      <li class="list-item">
+                          <h4 class="list-item-text-primary" data-bind="text: title">Heading</h4>
 
-                                            <h2 class="success-msg-title">Auftrag wurde erfolgreich übermittelt!</h2>
-                                        </div>
-                                        <div class="w-form-fail">
-                                            <p>Oops! Something went wrong while submitting the form</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w-col w-col-2"></div>
-                                <div class="w-col w-col-4">
-                                    <h3 class="latest-entries">Neue Interpreteers (Angebot)</h3>
-                                    <ul class="w-list-unstyled" data-bind="foreach: offers">
-                                        <li class="list-item">
-                                            <h4 class="list-item-text-primary" data-bind="text: title">Heading</h4>
+                          <div class="list-item-text-secondary" data-bind="text: description">This is
+                              some text inside of a div block.
+                          </div>
 
-                                            <div class="list-item-text-secondary" data-bind="text: summary">This is some
-                                                text inside of a div block.
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+                          <div class="list-item-text-secondary">
+                              Zielsprache: <span data-bind="text: required_language">Sprache</span>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="offer">
+      <div class="row">
+          <div class="col-md-6">
+              <h3 class="pb25">Angebot hinzufügen</h3>
+
+              <div class="w-form">
+                  <form class="request-form" id="wf-form-request-form-2"
+                        name="wf-form-request-form" data-name="request-form" method="post"
+                        data-bind="submit: onSubmitOffer">
+                      <select class="form-control" id="offerType" name="offerType"
+                              data-name="offerType" required="required">
+                          <option value="">Qualifikation</option>
+                          <option value="translator">Übersetzer</option>
+                          <option value="interpreter">Dolmetscher</option>
+                      </select>
+                      <div class="form-group">
+                        <label class="form-label" for="name-2">Name 2</label>
+                        <input class="w-input form-control" id="name-2" type="text"
+                             placeholder="Enter your name" name="name-2" data-name="Name 2">
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label" for="email-2">Email Addresse</label>
+                        <input class="w-input form-control" id="email-2" type="email"
+                             placeholder="Enter your email address" name="email-2"
+                             data-name="Email 2">
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label" for="primaryLanguage">Sprachen</label>
+                        <select class="form-control" id="primaryLanguage"
+                                name="primaryLanguage" data-name="primaryLanguage"
+                                required="required">
+                            <option value="">1. Sprache</option>
+                            <option value="german">Deutsch</option>
+                            <option value="english">Englisch</option>
+                            <option value="arabic">Arabisch</option>
+                        </select>
+                        <select class="form-control" id="secondaryLanguage"
+                                name="secondaryLanguage" data-name="secondaryLanguage"
+                                required="required">
+                            <option value="">2. Sprache</option>
+                            <option value="german">Deutsch</option>
+                            <option value="english">Englisch</option>
+                            <option value="arabic">Arabisch</option>
+                        </select>
+                      </div>
+
+                      <div class="checkbox">
+                        <label>
+                          <input class="w-checkbox-input" id="Beh-rdensicher-A" type="checkbox"
+                                 name="Beh-rdensicher-A3" data-name="Behördensicher (A3)"> staatlich geprüfter
+                              Übersetzer
+                          </label>
+                      </div>
+                      <input class="btn btn-primary btn-lg" type="submit"
+                             value="Mein Angebot eintragen" data-wait="Please wait...">
+                  </form>
+                  <div class="w-form-done form-success">
+                      <h2 class="success-msg-icon"></h2>
+
+                      <h2 class="success-msg-title">Auftrag wurde erfolgreich übermittelt!</h2>
+                  </div>
+                  <div class="w-form-fail">
+                      <p>Oops! Something went wrong while submitting the form</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 col-md-offset-2">
+              <h3 class="latest-entries-header">Neue Interpreteers (Angebot)</h3>
+              <ul class="latest-entries-list" data-bind="foreach: offers">
+                  <li class="list-item">
+                      <h4 class="list-item-text-primary" data-bind="text: title">Heading</h4>
+
+                      <div class="list-item-text-secondary" data-bind="text: summary">This is some
+                          text inside of a div block.
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+{% endblock %}
+
+{% block pagejs %}
+  <script src="{% static "js/index.js" %}"></script>
 {% endblock %}

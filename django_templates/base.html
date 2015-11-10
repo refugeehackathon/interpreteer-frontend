@@ -1,35 +1,39 @@
 {% load static from staticfiles %}
 
 <!DOCTYPE html>
-<!-- This site was created in Webflow. http://www.webflow.com-->
-<html data-wf-site="562bb6101af1c1a0602a3bf4" data-wf-page="562bb6101af1c1a0602a3bf6" class="wf-loading wf-roboto-n3-loading wf-roboto-n4-loading wf-roboto-n5-loading wf-roboto-n7-loading w-mod-js w-mod-no-touch w-mod-video w-mod-no-ios">
+<html>
 <head>
 	<meta charset="utf-8">
-  <title>interpreteer</title>
+	<title>interpreteer</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="generator" content="Webflow">
-	<link rel="stylesheet" type="text/css" href="{% static "css/normalize.css" %}">
-	<link rel="stylesheet" type="text/css" href="{% static "css/webflow.css" %}">
-	<link rel="stylesheet" type="text/css" href="{% static "css/interpreteer.webflow.css" %}">
+	<!--link rel="stylesheet" type="text/css" href="{% static "css/normalize.css" %}"-->
+	<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.min.css" %}">
+	<!--link rel="stylesheet" type="text/css" href="{% static "css/bootstrap-theme.min.css" %}"-->
+	<link rel="stylesheet" type="text/css" href="{% static "css/application.css" %}">
+	<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous" -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+	{% block pagesjs %}{% endblock %}
 	<script src="{% static "js/webfont.js" %}"></script>
 	<script>
-		WebFont.load({
-			google: {
-				families: ["Roboto:300,regular,500,700"]
-			}
-		});
-  </script>
-	<script type="text/javascript" src="{% static "js/modernizr.js" %}"></script>
+	WebFont.load({
+		google: {
+			families: ["Roboto:300,regular,500,700"]
+		}
+	});
+	</script>
+	<!--script type="text/javascript" src="{% static "js/modernizr.js" %}"></script-->
 	<link rel="shortcut icon" type="image/x-icon" href="{% static "images/favicon.png" %}">
 	<link rel="apple-touch-icon" href="{% static "css/img/webclip.png" %}">
 	<style type="text/css">
-		.ellipsis {
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			max-height: auto;
-		}
-    @media screen and (min-width: 1200px) { .w-container { max-width: 1170px; } }
+	.ellipsis {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-height: auto;
+	}
+	@media screen and (min-width: 1200px) { .w-container { max-width: 1170px; } }
 	</style>
 
 	<!-- load custom app logic -->
@@ -37,58 +41,61 @@
 
 </head>
 <body>
-<header class="w-section header-area">
-    <div class="w-container header-content">
-        <div class="w-nav" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
-            <div class="w-container app-bar"><img class="nav-logo"
-                                                  src="{% static "images/logo_interpreteer.png" %}"><a
-                    class="w-button settings-btn app-bar-menu hidden" href="#" data-ix="show-dialog-01"></a><a
-                    class="w-button search-button app-bar-menu hidden" href="#" id="search-button01"
-                    data-ix="show-searchbar"></a>
-                <nav class="w-nav-menu nav-menu" role="navigation"><a class="w-nav-link nav-link" href="index.html">Home</a><a
-                        class="w-nav-link nav-link" href="#">FAQ</a><a class="w-nav-link nav-link"
-                                                                       href="#">Hilfe</a>
-                </nav>
-                <div class="w-nav-button menu-button">
-                    <div class="w-icon-nav-menu"></div>
-                </div>
-            </div>
-        </div>
-        <div class="w-row hero-image">
-            <div class="w-col w-col-4 w-col-small-4 header-column"><img class="header-image"
-                                                                        src="{% static "images/icon_1.png" %}">
+	<nav class="navbar navbar-default" role="navigation">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+			<a class="navbar-brand" href="#">
+	        <img alt="Brand" src="{% static "images/logo_interpreteer.png" %}">
+	      </a>
+	    </div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#">FAQ</a></li>
+					<li><a href="#">Hilfe</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	<div class="container">
+		<header>
+			<div class="row text-center pb25">
+				<div class="col-lg-4 col-xs-4 text-center">
+					<img class="img-responsive img-center" src="{% static "images/icon_1.png" %}">
+					<h3>Übersetzer nötig?</h3>
+				</div>
+				<div class="col-lg-4 col-xs-4 text-center">
+					<img class="img-responsive img-center" src="{% static "images/icon_2.png" %}">
+					<h3>Gesuch einstellen.</h3>
+				</div>
+				<div class="col-lg-4 col-xs-4 text-center">
+					<img class="img-responsive img-center" src="{% static "images/icon_3.png" %}">
+					<h3>Interpreteer finden!</h3>
+				</div>
+			</div>
+		</header>
 
-                <h3 class="header-text">Übersetzer nötig?</h3>
-            </div>
-            <div class="w-col w-col-4 w-col-small-4 header-column"><img class="header-image"
-                                                                        src="{% static "images/icon_2.png" %}">
+	{% block content %}{% endblock %}
 
-                <h3 class="header-text">Gesuch einstellen.</h3>
-            </div>
-            <div class="w-col w-col-4 w-col-small-4"><img class="header-image"
-                                                          src="{% static "images/icon_3.png" %}">
-
-                <h3 class="header-text">Interpreteer finden!</h3>
-            </div>
-        </div>
-    </div>
-</header>
-
-{% block content %}{% endblock %}
-
-{% block scripts %}
-    <script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
-	<script type="text/javascript" src="{% static "js/webflow.js" %}"></script>
+	</div>
+	{% block scripts %}
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!--script type="text/javascript" src="{% static "js/webflow.js" %}"></script-->
 	<!--[if lte IE 9]><script src="{% static "js/placeholders.min.js" %}></script><![endif]-->
-    <script>
-      var requirejsconfig = {
-        baseUrl: '{% static 'js' %}',
-        paths: {
-          app: '../app',
-          data: '../data'
-        }
-      };
-    </script>
-{% endblock %}
+	<script>
+	var requirejsconfig = {
+		baseUrl: '{% static 'js' %}',
+		paths: {
+			app: '../app',
+			data: '../data'
+		}
+	};
+	</script>
+	{% endblock %}
 
 </body>
