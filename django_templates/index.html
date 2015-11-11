@@ -4,8 +4,24 @@
 {% load i18n %}
 
 {% block content %}
-<section id="forms">
+<header>
+  <div class="row text-center pb25">
+    <div class="col-lg-4 col-xs-4 text-center">
+      <img class="img-responsive img-center" src="{% static "images/icon_1.png" %}">
+      <h3>Übersetzer nötig?</h3>
+    </div>
+    <div class="col-lg-4 col-xs-4 text-center">
+      <img class="img-responsive img-center" src="{% static "images/icon_2.png" %}">
+      <h3>Gesuch einstellen.</h3>
+    </div>
+    <div class="col-lg-4 col-xs-4 text-center">
+      <img class="img-responsive img-center" src="{% static "images/icon_3.png" %}">
+      <h3>Interpreteer finden!</h3>
+    </div>
+  </div>
+</header>
 
+<section id="forms">
   <!-- Nav tabs -->
   <ul class="nav nav-tabs nav-justified request-offer-tab" role="tablist">
     <li role="presentation" class="active"><a href="#request" aria-controls="home" role="tab" data-toggle="tab">Gesuch aufgeben</a></li>
