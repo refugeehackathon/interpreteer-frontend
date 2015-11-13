@@ -97,19 +97,20 @@
 
               <div class="col-md-4 col-md-offset-2">
                   <h3 class="latest-entries-header">Neueste Sucheinträge</h3>
-                  <ul class="latest-entries-list" data-bind="foreach: requests">
-                      <li class="list-item">
-                          <h4 class="list-item-text-primary" data-bind="text: title">Heading</h4>
+                  <div  style="display: none" data-bind="visible: true">
+                    <ul class="latest-entries-list" data-bind="foreach: requests">
+                        <li class="list-item">
+                            <h4 class="list-item-text-primary" data-bind="text: title"></h4>
 
-                          <div class="list-item-text-secondary" data-bind="text: description">This is
-                              some text inside of a div block.
-                          </div>
+                            <div class="list-item-text-secondary" data-bind="text: description">
+                            </div>
 
-                          <div class="list-item-text-secondary">
-                              Zielsprache: <span data-bind="text: required_language">Sprache</span>
-                          </div>
-                      </li>
-                  </ul>
+                            <div class="list-item-text-secondary">
+                                Zielsprache: <span data-bind="text: required_language">Sprache</span>
+                            </div>
+                        </li>
+                    </ul>
+                  </div>
               </div>
           </div>
       </div>
