@@ -43,11 +43,11 @@
 
                           <div class="form-group">
                             <label class="form-label" for="title">Title</label>
-                            <input class="w-input form-control" id="title" type="text" placeholder="Gib einen Titel ein" name="title" data-name="title">
+                            <input class="form-control" id="title" type="text" placeholder="Gib einen Titel ein" name="title" data-name="title">
                           </div>
                           <div class="form-group">
                             <label class="form-label" for="description">Description</label>
-                            <input class="w-input form-control" id="description" type="text" placeholder="Gib eine Beschreibung ein" name="description" data-name="description">
+                            <input class="form-control" id="description" type="text" placeholder="Gib eine Beschreibung ein" name="description" data-name="description">
                           </div>
                             <div class="form-group">
                               <label class="form-label" for="unknown_lang">Benötigte Sprache</label>
@@ -55,7 +55,7 @@
                               <option value="">Bitte wählen</option>
                               {% get_current_language as LANGUAGE_CODE %}
                               {% for lang in LANGUAGES %}
-                              <option value="{{lang.0}}">{{lang.1}}</option>
+                                <option value="{{lang.0}}">{{lang.1}}</option>
                               {% endfor %}
                             </select>
                           </div>
@@ -74,11 +74,11 @@
                           </div>
                           <div class="form-group">
                             <label class="form-label" for="start_date">Date</label>
-                            <input type="date" class="w-input form-control" id="start_time" name="start_time" data-name="start_time">
+                            <input type="date" class="form-control" id="start_time" name="start_time" data-name="start_time">
                           </div>
                           <div class="form-group">
                             <label class="form-label" for="zipcode">PLZ&nbsp;/ Ort</label>
-                            <input class="w-input form-control" id="zipcode" type="text"
+                            <input class="form-control" id="zipcode" type="text"
                                  placeholder="Postleitzahl" name="zipcode" data-name="zipcode">
                           </div>
 
@@ -120,7 +120,7 @@
           <div class="col-md-6">
               <h3 class="pb25">Angebot hinzufügen</h3>
 
-              <div class="w-form">
+              <div>
                   <form class="request-form" id="wf-form-request-form-2"
                         name="wf-form-request-form" data-name="request-form" method="post"
                         data-bind="submit: onSubmitOffer">
@@ -132,12 +132,12 @@
                       </select>
                       <div class="form-group">
                         <label class="form-label" for="name-2">Name 2</label>
-                        <input class="w-input form-control" id="name-2" type="text"
+                        <input class="form-control" id="name-2" type="text"
                              placeholder="Enter your name" name="name-2" data-name="Name 2">
                       </div>
                       <div class="form-group">
                         <label class="form-label" for="email-2">Email Addresse</label>
-                        <input class="w-input form-control" id="email-2" type="email"
+                        <input class="form-control" id="email-2" type="email"
                              placeholder="Enter your email address" name="email-2"
                              data-name="Email 2">
                       </div>
@@ -163,7 +163,7 @@
 
                       <div class="checkbox">
                         <label>
-                          <input class="w-checkbox-input" id="Beh-rdensicher-A" type="checkbox"
+                          <input id="Beh-rdensicher-A" type="checkbox"
                                  name="Beh-rdensicher-A3" data-name="Behördensicher (A3)"> staatlich geprüfter
                               Übersetzer
                           </label>
