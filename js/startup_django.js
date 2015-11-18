@@ -7,7 +7,7 @@ var basePath = {
 	api: 'api/'
 };
 
-require(['jquery', 'knockout-3.3.0', 'lang', 'serializejson', 'app/Backend', 'app/Main', 'domReady!'], function ($, ko) {
+require(['jquery', 'knockout-3.3.0', 'bootstrap.min', 'lang', 'serializejson', 'app/Backend', 'app/Main', 'domReady!'], function ($, ko) {
 
 	//register modules globally
 	window.$ = $;
