@@ -100,8 +100,7 @@ section#forms
                 .checkbox
                   label
                     input#Beh-rdensicher-A data-name="Behördensicher (A3)" name="Beh-rdensicher-A3" type="checkbox"
-                    | staatlich geprüfter
-                    | Übersetzer
+                    | staatlich geprüfter Übersetzer
                 input.btn.btn-primary.btn-lg data-wait="Please wait..." type="submit" value="Mein Angebot eintragen"
               .w-form-done.form-success
                 h2.success-msg-icon
@@ -111,9 +110,10 @@ section#forms
           .col-md-4.col-md-offset-2
             h3.latest-entries-header Neue Interpreteers (Angebot)
             ul.latest-entries-list
-              li.list-item
-                h4.list-item-text-primary
-                .list-item-text-secondary 
+              each model.offers as |offer|
+                li.list-item
+                  h4.list-item-text-primary = offer.title
+                  .list-item-text-secondary = offer.user
 
 
 = outlet
