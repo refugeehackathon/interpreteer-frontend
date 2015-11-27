@@ -115,7 +115,7 @@ section#forms
               each model.offers as |offer|
                 li.list-item
                   h4.list-item-text-primary = offer.title
-                  .list-item-text-secondary = offer.user
+                  .list-item-text-secondary = offer.user.username
 
 
 = outlet
