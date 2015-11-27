@@ -34,6 +34,8 @@ section#forms
                   label.form-label for="unknown_lang"  Benötigte Sprache
                   select#unknown_lang.form-control data-name="required_language" name="required_language" required="required" 
                     option value=""  Bitte wählen
+                    each model.languages as |language|
+                      option value="#{language.language_code}" = t language.translation_key
                 .form-group
                   label.form-label for="direction"  Übersetzungsrichtung
                   select#direction.form-control data-name="direction" name="direction" required="required" 

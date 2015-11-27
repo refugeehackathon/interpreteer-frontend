@@ -4,7 +4,8 @@ export default Ember.Route.extend({
   model() {
     return Ember.RSVP.hash({
       requests: this.store.findAll('request'),
-      offers: this.store.findAll('offer')
+      offers: this.store.findAll('offer'),
+      languages: this.store.findAll('language')
     });
   }
 });
