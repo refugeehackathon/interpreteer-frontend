@@ -10,6 +10,8 @@ nav.navbar.navbar-default role="navigation"
         img alt="interpreteer" src="assets/images/logo_interpreteer.png"
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul.nav.navbar-nav.navbar-right
+        fa-icon "global"
+        language-select
         li
           link-to "about"
             = t "navigation.about"

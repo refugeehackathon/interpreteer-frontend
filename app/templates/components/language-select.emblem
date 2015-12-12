@@ -1,0 +1,9 @@
+a.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"
+  i.fa.fa-globe.fa-fw
+  locale
+  span.caret
+ul.dropdown-menu
+  each locale in locales
+    li data-id="{{locale.id}}"
+      a href="#" click="change locale.id"
+        = locale.text
