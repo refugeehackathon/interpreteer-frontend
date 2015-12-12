@@ -15,7 +15,7 @@ export default Ember.Component.extend({
   }),
 
   locale: computed('i18n.locale', function() {
-      return this.get('i18n').t('language_code.' + this.get('i18n.locale'))
+      return this.get('i18n').t('language_code.' + this.get('i18n.locale'));
   }),
 
   // It would be nice to do this with `{{action "setLocale" on="change"}}`
