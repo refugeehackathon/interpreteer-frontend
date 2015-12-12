@@ -1,20 +1,20 @@
 .row.links.text-center
   .col-xs-6.col-md-3
     .icon
-      i.fa.fa-question-circle
+      fa-icon "question-circle"
     .title = t "index.find_help"
   .col-xs-6.col-md-3
     .icon
-      i.fa.fa-exclamation-circle
+      fa-icon "exclamation-circle"
     .title = t "index.give_help"
   .col-xs-6.col-md-3
     .icon
-      i.fa.fa-user
+      fa-icon "user"
     .title = t "index.login"
   .col-xs-6.col-md-3
     link-to "about"
       .icon
-        i.fa.fa-info-circle
+        fa-icon "info-circle"
       .title = t "index.information"
 
 = outlet
