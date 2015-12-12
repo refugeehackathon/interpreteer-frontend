@@ -6,7 +6,7 @@ nav.navbar.navbar-default role="navigation"
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand href="/"
+      link-to "index" class="navbar-brand"
         img alt="interpreteer" src="assets/images/logo_interpreteer.png"
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul.nav.navbar-nav.navbar-right
