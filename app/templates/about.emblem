@@ -1,2 +1,45 @@
-h1 About us
+.row
+  .col-md-8.col-md-offset-2
+    h1 Über interpreteer
+    h2 Was ist interpreteer?
+    p
+      | interpreteer verbindet Menschen auf der Suche nach sprachlicher Unterstützung mit Menschen, die ihnen auf ehrenamtlicher Basis helfen wollen. Diese Menschen nennen wir interpreteer, abgeleitet aus der Verbindung der Worte 
+      em interpret
+      | er (Dolmetscher/in) und volun
+      em teer 
+      | (Freiwillige/r).
+    h2 Für wen ist interpreteer?
+    p Ganz gleich ob Neuankömmling, Bürger/in oder Hilfsinitiative: interpreteer bringt Menschen, die sprachliche Hilfe suchen oder diese für andere Menschen organisieren, mit Menschen zusammen, die ehrenamtlich ihre Sprachfähigkeiten als Hilfe zur Verfügung stellen. Auf interpreteer kann man als Suchende/r und Anbietende/r zugleich unterwegs sein.
+    h3 Für Neuankömmlinge
+    p Wer als Neuankömmling sprachliche Hilfe für einen Behördentermin, für die Übersetzung von Schriftstücken, oder für einen Einkauf in neuer, ungewohnter Umgebung sucht, findet auf interpreteer Menschen in seinem Umkreis, die bereit sind, bei der Überwindung der alltäglichen sprachlichen Stolpersteine zu helfen und zu begleiten.
+    p Umgekehrt können Neuankömmlinge auch ohne Arbeitsgenehmigung in Deutschland ihre Sprachfähigkeiten auf interpreteer auf ehrenamtlicher Basis anbieten und damit anderen Neuankömmlingen helfen. Ebenfalls können sie anderen Menschen ihre Kultur und ihre Sprache im Sinne des gegenseitigen Lernens von Sprache innerhalb eines Tandems vermitteln.
+    p interpreteer soll als Plattform ausgebaut werden, die Neuankömmlingen die Möglichkeiten für die Professionalisierung ihrer Sprachkenntnisse näher bringt und ehrenamtliches Arbeiten mit der individuellen, sprachlichen Weiterbildung vereint.
+    h3 Für Bürger/innen
+    p Wer mehr als eine Sprache in Wort oder Schrift beherrscht, kann seine Fähigkeiten anderen Menschen auf interpreteer anbieten und sie darin unterstützen, ihre Anliegen in unserer Gesellschaft zu vertreten und die Anliegen ihrer Mitmenschen zu verstehen.
+    p Dabei ist es nicht wichtig, ob diese Fähigkeiten auf der Grundlage von schulischem Wissen, einer mehrsprachigen Erziehung, durch Aufenthalte im Ausland, oder durch eine professionelle Ausbildung mit ggf. staatlicher Prüfung erworben wurden, solange die Unterstützung auf ehrenamtlicher Basis gewährt wird.
+    p Auch Fähigkeiten, Menschen aus einem anderen Kulturkreis die eigene Muttersprache und Kultur zu vermitteln, z.B. im Sinne einer Patenschaft oder eines Mentoring, können auf interpreteer angeboten werden.
+    h3 Für professionelle Dolmetscher/innen und Übersetzer/innen
+    p interpreteer soll professionellen Dienstleistern auf dem Gebiet des Dolmetschens und des Übersetzens eine einfache, zeitsparende Möglichkeit bieten, sich ehrenamtlich zu engagieren und dieses Engagement und das Maß an Preisgabe ihrer Privatsphäre zu managen. Eine Unterstützung kann auch durch ein Coaching und Training von unerfahreneren interpreteers erfolgen.
+    h3 Für Initiativen und gemeinnützige Organisationen
+    p Initiativen und gemeinnützige Organisationen können auf interpreteer sprachliche Unterstützung für Neuankömmlinge in deren Umfeld organisieren. Auch Gesuche für eine sprachliche Unterstützung bei der Abwicklung von Projekten (z.B. Übersetzungsarbeiten) oder bei der Durchführung von Terminen unter Beteiligung mehrsprachiger Teilnehmer/innen können über interpreteer aufgegeben werden.
+    h2 Welche Funktionen wollen wir in der ersten Version von interpreteer realisieren?
+    p interpreteer funktioniert wie ein schwarzes Brett, auf dem man sprachliche Unterstützung suchen und anbieten kann. Die Vermittlung zwischen Angebot und Gesuch geschieht auf der Grundlage der angebotenen/ gesuchten Leistung und der Distanz zwischen Anbietendem/-er und Suchendem/-er. Suchergebnisse werden nach Entfernung gelistet dargestellt.
+    p Die Kontaktaufnahme zwischen Suchenden und Anbietenden funktioniert ganz einfach: über interpreteer. interpreteer sendet ihre Anfragen per E-Mail an die Herausgeber/innen der Anzeigen.
+    p Darüber hinaus finden interpreteers auf der Plattform Informationen, die sie in ihrer ehrenamtlichen Aufgabe unterstützen.
+    h2 Wird mit interpreteer Geld verdient?
+    p Nein.
+    p Weder von den Betreibern, noch von den Anbietenden, noch von den Suchenden.
+    p Die Nutzung der Plattform ist kostenlos. Ausschließlich ehrenamtliche und somit kostenlose Angebote dürfen auf interpreteer veröffentlicht werden.
+    h2 Wie ist der Entwicklungsstand von interpreteer?
+    p Ein Prototyp befindet sich in der Umsetzung. Wir planen den Start von interpreteer im November 2015.
+    p Was sind die Leitmotive bei der Entwicklung von interpreteer?
+    p Eine gute Anwendung zeichnet aus, dass sie ein Problem einfach, zuverlässig, und bestmöglich löst. Dabei sollen die Menschen, die interpreteer nutzen, immer im Vordergrund stehen. Es ist unsere Überzeugung, dass Technik ein Werkzeug ist, um Menschen ihr Leben zu erleichtern, sie miteinander zu vernetzen und Begegnung zwischen ihnen zu ermöglichen, nicht, um sie zu ersetzen.
+    p Ein gutes grafisches Konzept, so wenig Text wie möglich, selbsterklärende GUI, gute, international allgemein bekannte Icons und Symbole zeichnen interpreteer aus. Auch Menschen mit geringen sprachlichen Kompetenzen sollen interpreteer benutzen können, der Zugriff über Browser ist von allen Plattformen aus möglich. Für die Beschreibung der Funktionen von interpreteer sollen animierte Storyboards entwickelt werden.
+    h2 Welche Technik steht hinter interpreteer?
+    p interpreteer ist eine responsive webpage, die im Sinne eines „mobile first!“ Ansatzes programmiert wird. Unser Ziel ist es, unseren Dienst unabhängig von den Betriebssystemen der Smartphones in hoher Qualität anzubieten, ganz so, als wäre interpreteer eine App.
+    h2 Wer steckt hinter interpreteer?
+    p Hinter interpreteer steckt ein gemischtes Team aus ehrenamtlich arbeitenden Berufstätigen und Studierenden unterschiedlicher Nationalität. Wir sind Backend-, Frontendentwickler und Projektmanager.
+    h2 Wie kann man sich bei interpreteer engagieren?
+    p Wir sind auf der Suche nach Verstärkung für unser Team. Insbesondere benötigen wir neben Webentwickler/innen Grafiker/innen, Texter/innen und professionelle Übersetzer/innen für Arabisch / Farsi / Kurdisch / Assyrisch / Französisch /…. Wenn Sie sich durch unser Projekt angesprochen fühlen, zögern Sie nicht, Kontakt mit uns aufzunehmen.
+
 = outlet
