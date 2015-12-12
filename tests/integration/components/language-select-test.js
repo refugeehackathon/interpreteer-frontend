@@ -6,20 +6,12 @@ moduleForComponent('language-select', 'Integration | Component | language select
 });
 
 test('it renders', function(assert) {
-  
+
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });" + EOL + EOL +
 
   this.render(hbs`{{language-select}}`);
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:" + EOL +
-  this.render(hbs`
-    {{#language-select}}
-      template block text
-    {{/language-select}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim().indexOf("German") > -1, true);
+  assert.equal(this.$().text().trim().indexOf("English") > -1, true);
 });
