@@ -1,13 +1,14 @@
 export default {
-  // "some.translation.key": "Text for some.translation.key",
-  //
-  // "a": {
-  //   "nested": {
-  //     "key": "Text for a.nested.key"
-  //   }
-  // },
-  //
-  // "key.with.interpolation": "Text with {{anInterpolation}}"
+  "navigation": {
+    "about": "About"
+  },
+  "index": {
+    "find_help": "Find language support",
+    "give_help": "Give language support",
+    "login": "Log in/Sign up",
+    "information": "Information",
+  },
+
   "language_code": {
     "aa": "Afar",
     "ab": "Abkhazian",

@@ -1,121 +1,20 @@
-header
-  .row.text-center.pb25
-    .col-lg-4.col-xs-4.text-center
-      img.img-responsive.img-center src="assets/images/icon_1.png" /
-      h3 Übersetzer nötig?
-    .col-lg-4.col-xs-4.text-center
-      img.img-responsive.img-center src="assets/images/icon_2.png" /
-      h3 Gesuch einstellen.
-    .col-lg-4.col-xs-4.text-center
-      img.img-responsive.img-center src="assets/images/icon_3.png" /
-      h3 Interpreteer finden!
-
-section#forms
-  ul.nav.nav-tabs.nav-justified.request-offer-tab role="tablist"
-    li.active role="presentation" 
-      a aria-controls="home" data-toggle="tab" href="#request" role="tab"  Gesuch aufgeben
-    li role="presentation" 
-      a aria-controls="profile" data-toggle="tab" href="#offer" role="tab"  Interpreteer werden
-  .tab-content
-    #request.tab-pane.active role="tabpanel" 
-      div
-        .row
-          .col-md-6
-            h3.pb25 Gesuch /&nbsp;Auftrag hinzufügen
-            .form
-              form#wf-form-request-form.request-form method="post" name="wf-form-request-form" 
-                .form-group
-                  label.form-label for="title"  Title
-                  input#title.form-control data-name="title" name="title" placeholder="Gib einen Titel ein" type="text"
-                .form-group
-                  label.form-label for="description"  Description
-                  input#description.form-control data-name="description" name="description" placeholder="Gib eine Beschreibung ein" type="text" /
-                .form-group
-                  label.form-label for="unknown_lang"  Benötigte Sprache
-                  select#unknown_lang.form-control data-name="required_language" name="required_language" required="required" 
-                    option value=""  Bitte wählen
-                    each model.languages as |language|
-                      option value="#{language.language_code}" = t language.translation_key
-                .form-group
-                  label.form-label for="direction"  Übersetzungsrichtung
-                  select#direction.form-control data-name="direction" name="direction" required="required" 
-                    option value="0"  Aus unbekannter Sprache übersetzen
-                    option value="1"  In unbekannte Sprache übersetzen
-                    option value="2"  In beide Richtungen übersetzen
-                .checkbox
-                  label
-                    input#presence data-name="requires_presence" name="requires_presence" type="checkbox" value="0"
-                    | Anwesenheit erforderlich
-                .form-group
-                  label.form-label for="start_date"  Date
-                  input#start_time.form-control data-name="start_time" name="start_time" type="date"
-                .form-group
-                  label.form-label for="zipcode"  PLZ&nbsp;/ Ort
-                  input#zipcode.form-control data-name="zipcode" name="zipcode" placeholder="Postleitzahl" type="text"
-                input.btn.btn-primary.btn-lg data-wait="Please wait..." type="submit" value="Mein Gesuch absenden"
-              .w-form-done.form-success
-                h2.success-msg-title
-                  span.success-msg-icon
-                  | Gesuch
-                  | wurde erfolgreich übermittelt!
-              .w-form-fail
-                p Oops! Something went wrong while submitting the form
-          .col-md-4.col-md-offset-2
-            h3.latest-entries-header Neueste Sucheinträge
-            div
-              ul.latest-entries-list
-                each model.requests as |request|
-                  li.list-item
-                    h4.list-item-text-primary = request.title
-                    .list-item-text-secondary = request.description
-                    .list-item-text-secondary
-                      | Zielsprache: 
-                      span = request.required_language
-    #offer.tab-pane role="tabpanel" 
-        .row
-          .col-md-6
-            h3.pb25 Angebot hinzufügen
-            div
-              form#wf-form-request-form-2.request-form method="post" name="wf-form-request-form" 
-                select#offerType.form-control data-name="offerType" name="offerType" required="required" 
-                  option value=""  Qualifikation
-                  option value="translator"  Übersetzer
-                  option value="interpreter"  Dolmetscher
-                .form-group
-                  label.form-label for="name-2"  Name 2
-                  input#name-2.form-control data-name="Name 2" name="name-2" placeholder="Enter your name" type="text"
-                .form-group
-                  label.form-label for="email-2"  Email Addresse
-                  input#email-2.form-control data-name="Email 2" name="email-2" placeholder="Enter your email address" type="email"
-                .form-group
-                  label.form-label for="primaryLanguage"  Sprachen
-                  select#primaryLanguage.form-control data-name="primaryLanguage" name="primaryLanguage" required="required" 
-                    option value=""  1. Sprache
-                    option value="german"  Deutsch
-                    option value="english"  Englisch
-                    option value="arabic"  Arabisch
-                  select#secondaryLanguage.form-control data-name="secondaryLanguage" name="secondaryLanguage" required="required" 
-                    option value=""  2. Sprache
-                    option value="german"  Deutsch
-                    option value="english"  Englisch
-                    option value="arabic"  Arabisch
-                .checkbox
-                  label
-                    input#Beh-rdensicher-A data-name="Behördensicher (A3)" name="Beh-rdensicher-A3" type="checkbox"
-                    | staatlich geprüfter Übersetzer
-                input.btn.btn-primary.btn-lg data-wait="Please wait..." type="submit" value="Mein Angebot eintragen"
-              .w-form-done.form-success
-                h2.success-msg-icon
-                h2.success-msg-title Auftrag wurde erfolgreich übermittelt!
-              .w-form-fail
-                p Oops! Something went wrong while submitting the form
-          .col-md-4.col-md-offset-2
-            h3.latest-entries-header Neue Interpreteers (Angebot)
-            ul.latest-entries-list
-              each model.offers as |offer|
-                li.list-item
-                  h4.list-item-text-primary = offer.title
-                  .list-item-text-secondary = offer.user.username
-
+.row.links.text-center
+  .col-xs-6.col-md-3
+    .icon
+      i.fa.fa-question-circle
+    .title = t "index.find_help"
+  .col-xs-6.col-md-3
+    .icon
+      i.fa.fa-exclamation-circle
+    .title = t "index.give_help"
+  .col-xs-6.col-md-3
+    .icon
+      i.fa.fa-user
+    .title = t "index.login"
+  .col-xs-6.col-md-3
+    link-to "about"
+      .icon
+        i.fa.fa-info-circle
+      .title = t "index.information"
 
 = outlet

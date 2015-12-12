@@ -63,7 +63,11 @@ $nav-tabs-active-link-hover-border-color: #ddd;
 $nav-tabs-justified-link-border-color: #ddd;
 $nav-tabs-justified-active-link-border-color: $body-bg;
 
+$font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headings-color: $brand-primary;
+
 @import "bootstrap";
+@import "font-awesome";
 
 .img-center {
   margin-left: auto;
@@ -180,4 +184,18 @@ ul.nav.nav-tabs li.active a {
     header h3 {
       font-size: 16px;
     }
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .icon i {
+    font-size: 10em;
+  }
+  .title {
+    font-size: 1.5em;
+  }
 }
