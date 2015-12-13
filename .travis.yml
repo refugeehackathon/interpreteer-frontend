@@ -1,22 +1,24 @@
 language: node_js
 node_js:
-  - '0.12'
+- '0.12'
 sudo: false
 cache:
   directories:
-    - node_modules
+  - node_modules
 before_install:
-  - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
-  - npm config set spin false
-  - npm install -g npm@^2
+- export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
+- npm config set spin false
+- npm install -g npm@^2
 install:
-  - npm install -g bower
-  - npm install
-  - bower install
+- npm install -g bower
+- npm install
+- bower install
 script:
-  - npm test
+- npm test
 deploy:
   provider: heroku
-  app: interpreteer-frontend
   api_key:
-    secure: Vq3VIGnmZlFbAZHhGHP44u7CGIvfdHAJ1CVtaTEyUvI6pVjZSzhtEgh44zhw4HezZtFIqOixFPcSHewOSzzpBfzHq6iDfYO+GKi4MarBMUqia9jGulDynhxC56mRG+TQwXx4DQVSpVO4RwG3/5gwytFAgKjmWE7iPU5xqyVjXi8KqvuPfqHLv5YD/3J2Myk59nO+L6EJj88rrIZrPoJX2RK+UnY1NTwgyGyvZMRWFMbD71u2csnhnoGz1nflGX5EdVPJmJEe+hfeGLfNjiG9NFdzK1+dEyWGy31fTf8X6KLOuuFgtie+uC80SiPWW96qUODphsaDwrOfw48ILrhGrais3LL08sE1Jix1gKLnQ9Vuc3LE85aMPe91FX4hQBagZaKTEjVKUKvjAYq3u6Sl00fRhTWZ1dHnjAD8T/uESeFMtgEzFZAFLPcW6lvB91IL1sQR34AVS9ZdONsTQ7e+wwlBG5MRjn4gp8sDV5BhgjBrfr1ETgBAp53WXhxFIOST0y973Oaf13gByCbVaMOF0w4UAguFlYkfnHCbDg5odnKQ3gqgnusF0Rwww9HU0zVEA/5/XalNZuNF/tVLDYK/h2g3y/CLBwwLYDJRymQ1pQyfG+o7Ecc/jQTxlBSZHGX2f/Bfo0thaFGyqFHLCnVqwqabUuolyWo0AnMJyGclv8s=
+    secure: psDqn5hHiRZEwK+agfXrs+qLQscqI1v4xL5mRe2++wrxaPa9cp+lzRWxUcAsgCSStf8fhgHvJbaoCyQYXBp5NepOtcAA+7U/UO3QrT+w5LcWSr9S9/AC4A6lHti9ZMVCjupUuaXdeGICWLUVzz4/6WTqoVFeeAseVv3Ks6svv5PV8YI0GHQOPjZ6FSC4nhWroFVSo/SQDym9fKOW7EfUZy/EqsyHaIeEOFFhy/wQOlwJ4GGjKRccAYAgC1Sv8H/3AeLooG3/R3M9U0+YL/NRTLRxdfinabJ3pXbNkbPLSkAyq4eGSUT/0FLsy/5HR+WGcAFmAy0pqtiv8iwIB8UvppP73tuwojCXaactmO9SSNTWJu0e8vwqKCNHcyu1d/v8bVSJPC0s2h2f1hRghlCb84NUv2jQVZKS3QlPhy0yIbV2/y6IR0u1TAussVn5xfWFe1K9cpxy88PBOisGCMSoc0F677G/U8d8Mh5Y6Rby3wGUJPEHhM0Ga+D2I+4ymYam98sqJss/xi8lLK4f452sfrytcmYvHfgWohd6jSekUadaakIqsU7uQ7qysUUAsGpmAtYliLvQUZA9qN6xzBJBacRWpGBtxrQdanSvFZg9STUBmOjfHgHDCCf/iJDptwRg5uYs9mKF7RzwDKg/BxZQIyCGXQKFmn8XtoPKFrQ1T/w=
+  app: interpreteer-frontend
+  on:
+    repo: refugeehackathon/interpreteer-frontend
