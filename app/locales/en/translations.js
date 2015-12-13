@@ -8,6 +8,16 @@ export default {
     "login": "Log in/Sign up",
     "information": "Information",
   },
+  "request_categories": {
+    "interpret": "Interpret",
+    "translate": "Translate",
+    "telephone_conference": "Telephone conference",
+    "appointment": "Appointment",
+    "photo": "Photo of document",
+    "document": "Document",
+    "voice_message": "Voice message",
+    "tandem": "Tandem"
+  },
 
   "language_code": {
     "aa": "Afar",
