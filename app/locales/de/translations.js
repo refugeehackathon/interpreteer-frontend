@@ -1,13 +1,14 @@
 export default {
-  // "some.translation.key": "Text for some.translation.key",
-  //
-  // "a": {
-  //   "nested": {
-  //     "key": "Text for a.nested.key"
-  //   }
-  // },
-  //
-  // "key.with.interpolation": "Text with {{anInterpolation}}"
+  "navigation": {
+    "about": "Über uns"
+  },
+  "index": {
+    "find_help": "Sprachhilfe suchen",
+    "give_help": "Sprachhilfe geben",
+    "login": "Anmelden",
+    "information": "Informationen",
+  },
+
   "language_code": {
     "aa": "Afar",
     "ab": "Abchasisch",
