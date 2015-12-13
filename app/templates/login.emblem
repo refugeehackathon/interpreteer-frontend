@@ -1,0 +1,42 @@
+form action='authenticateWithOAuth2' on='submit'
+  .row
+    .col-xs-12
+      .form-group
+        .input-group
+          span.input-group-addon
+           .icon
+              fa-icon "envelope"
+          input.form-control value=identification placeholder='Your Email Address'
+  .row
+    .col-xs-12
+      .form-group
+        .input-group
+          span.input-group-addon
+           .icon
+              fa-icon "key"
+          input.form-control value=password placeholder='Your Password' type='password'
+  .row.login-links
+    .col-xs-2
+      button.btn.btn-info type='submit'
+        .icon
+          fa-icon 'sign-in'
+    .col-xs-2
+      button.btn.btn-default type='button'
+        .icon
+          fa-icon 'question-circle'
+
+.strike
+  span OR
+
+.row.login-links.text-center
+  .col-xs-6
+    span Create Account
+    .icon
+      fa-icon 'user-plus'
+  .col-xs-6 action='authenticateWithFacebook' style='cursor:pointer;'
+    span Log In with Facebook
+    .icon
+      fa-icon 'facebook-official'
+
+
+= outlet

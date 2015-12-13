@@ -43,6 +43,7 @@
     "ember-django-adapter": "1.1.1",
     "ember-export-application-global": "^1.0.4",
     "ember-i18n": "4.2.0",
+    "ember-simple-auth": "1.0.1",
     "npm-registry-client": "^7.0.9"
   }
 }

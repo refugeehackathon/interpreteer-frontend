@@ -9,9 +9,10 @@
       fa-icon "exclamation-circle"
     .title = t "index.give_help"
   .col-xs-6.col-md-3
-    .icon
-      fa-icon "user"
-    .title = t "index.login"
+    link-to "login"
+      .icon
+        fa-icon "user"
+      .title = t "index.login"
   .col-xs-6.col-md-3
     link-to "about"
       .icon
