@@ -1,8 +1,9 @@
 .row.links.text-center
   .col-xs-6.col-md-3
-    .icon
-      fa-icon "question-circle"
-    .title = t "index.find_help"
+    link-to "request_categories"
+      .icon
+        fa-icon "question-circle"
+      .title = t "index.find_help"
   .col-xs-6.col-md-3
     .icon
       fa-icon "exclamation-circle"

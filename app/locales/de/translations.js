@@ -8,6 +8,16 @@ export default {
     "login": "Anmelden",
     "information": "Informationen",
   },
+  "request_categories": {
+    "interpret": "Dolmetschen",
+    "translate": "Übersetzen",
+    "telephone_conference": "Telefonkonferenz",
+    "appointment": "Termin",
+    "photo": "Foto eines Dokuments",
+    "document": "Dokument",
+    "voice_message": "Sprachnachricht",
+    "tandem": "Tandem"
+  },
 
   "language_code": {
     "aa": "Afar",

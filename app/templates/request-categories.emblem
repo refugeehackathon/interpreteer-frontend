@@ -1,0 +1,52 @@
+.row
+  .col-xs-4.text-center
+    div
+      img.img-center src="assets/images/interpret.png" height="80px"
+    div
+      = t "request_categories.interpret"
+  .col-xs-8
+    .list-group.mb0
+      .row.list-item
+        .col-xs-3.col-md-1
+          fa-icon "phone" class="fa-fw fa-2x"
+        .col-xs-9.vcenter
+          span = t "request_categories.telephone_conference"
+      .row.list-item
+        .col-xs-3.col-md-1
+          img.img-center src="assets/images/meeting.svg" height="50px" class="fa-fw fa-3x"
+        .col-xs-9.vcenter
+          = t "request_categories.appointment"
+hr.hidden-xs
+hr.mt10.mb10.visible-xs
+.row
+  .col-xs-4.text-center
+    div
+      img.img-center src="assets/images/translation.png" height="80px"
+    div
+    = t "request_categories.translate"
+  .col-xs-8
+    .list-group.mb0
+      .row.list-item
+        .col-xs-3.col-md-1
+          fa-icon "camera" class="fa-fw fa-2x"
+        .col-xs-9.vcenter
+          = t "request_categories.photo"
+      .row.list-item
+        .col-xs-3.col-md-1
+          fa-icon "file-text" class="fa-fw fa-2x"
+        .col-xs-9.vcenter
+          = t "request_categories.document"
+      .row.list-item
+        .col-xs-3.col-md-1
+          fa-icon "microphone" class="fa-fw fa-2x"
+        .col-xs-9.vcenter
+          = t "request_categories.voice_message"
+hr.hidden-xs
+hr.mt10.mb10.visible-xs
+.row
+  .col-xs-4.text-center
+    div
+      img.img-center src="assets/images/tandem.svg" height="80px"
+    = t "request_categories.tandem"
+    
+= outlet
