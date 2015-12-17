@@ -15,5 +15,9 @@ nav.navbar.navbar-default role="navigation"
         li
           link-to "about"
             = t "navigation.about"
+      if session.isAuthenticated
+        if sessionUser.user
+          p.navbar-text.navbar-right
+            | Logged in as: {{sessionUser.user.username}}
 .container
   = outlet

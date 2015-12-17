@@ -1,0 +1,49 @@
+if errorMessage
+  .alert.alert-danger.alert-dismissible role="alert"
+    button.close type="button" data-dismiss="alert" aria-label="Close"
+      span hidden="true" &times;
+    = errorMessage
+
+form submit="authenticateWithDjango"
+  .row
+    .col-xs-12
+      .form-group class=emailError:has-error:
+        .input-group
+          span.input-group-addon
+           .icon
+              fa-icon "envelope"
+          = input class='form-control' value=identification placeholder='Your Email Address'
+  .row
+    .col-xs-12
+      .form-group class=passwordError:has-error
+        .input-group
+          span.input-group-addon
+           .icon
+              fa-icon "key"
+          = input class='form-control' value=password placeholder='Your Password' type='password'
+  .row.login-links
+    .col-xs-3.col-sm-2.col-md-1
+      button.btn.btn-info type='submit'
+        .icon
+          fa-icon 'sign-in'
+          div Log In
+    .col-xs-3.col-sm-2.col-md-1
+      button.btn.btn-default type='button'
+        .icon
+          fa-icon 'question-circle'
+          div Forgot Password?
+
+.strike
+  span OR
+
+.row.login-links.text-center
+  .col-xs-6
+    span Create Account
+    .icon
+      fa-icon 'user-plus'
+  .col-xs-6 style='cursor:pointer;'
+    a click='authenticateWithFacebook'
+      span Log In with Facebook
+      .icon
+        fa-icon 'facebook-official'
+
