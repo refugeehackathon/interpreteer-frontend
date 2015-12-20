@@ -18,6 +18,16 @@ export default {
     "voice_message": "Voice message",
     "tandem": "Tandem"
   },
+  "login": {
+    "login": "Log In",
+    "forgot_password": "Forgot Password?",
+    "or": "OR",
+    "create_account": "Create Account",
+    "login_facebook": "Log In with Facebook",
+    "email_placeholder": "Your Email Address",
+    "password_placeholder": "Your Password",
+    "wrong_credentials": "Username and Password didn\'t match. Please try again."
+  },
 
   "language_code": {
     "aa": "Afar",

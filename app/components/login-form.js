@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   session: Ember.inject.service('session'),
+  i18n: Ember.inject.service('i18n'),
 
   actions: {
     authenticateWithDjango() {
@@ -13,7 +14,7 @@ export default Ember.Component.extend({
         this.setProperties({
           'passwordError': true,
           'emailError': true,
-          'errorMessage': 'Username and Password didn\'t match. Please try again.'
+          'errorMessage': this.get('i18n').t('login.wrong_credentials')
         });
       });
     },
@@ -22,6 +23,14 @@ export default Ember.Component.extend({
       this.get('session').authenticate('authenticator:torii', 'facebook').catch((reason) => {
         this.set('errorMessage', reason.responseText);
       });
+    },
+
+    emailPlaceholder() {
+      return this.get('i18n').t('login.email_placeholder');
+    },
+
+    passwordPlaceholder() {
+      return this.get('i18n').t('login.password_placeholder');
     }
   }
 

@@ -12,7 +12,7 @@ form submit="authenticateWithDjango"
           span.input-group-addon
            .icon
               fa-icon "envelope"
-          = input class='form-control' value=identification placeholder='Your Email Address'
+          = input class='form-control' value=identification placeholder=component.emailPlaceholder
   .row
     .col-xs-12
       .form-group class=passwordError:has-error
@@ -20,30 +20,35 @@ form submit="authenticateWithDjango"
           span.input-group-addon
            .icon
               fa-icon "key"
-          = input class='form-control' value=password placeholder='Your Password' type='password'
+          = input class='form-control' value=password placeholder=component.passwordPlaceholder type='password'
   .row.login-links
-    .col-xs-3.col-sm-2.col-md-1
-      button.btn.btn-info type='submit'
+    .col-xs-6
+      button.btn.btn-info.btn-block type='submit'
         .icon
           fa-icon 'sign-in'
-          div Log In
-    .col-xs-3.col-sm-2.col-md-1
-      button.btn.btn-default type='button'
+          div 
+            =t "login.login"
+    .col-xs-6
+      button.btn.btn-default.btn-block type='button'
         .icon
           fa-icon 'question-circle'
-          div Forgot Password?
+          div 
+            =t "login.forgot_password"
 
 .strike
-  span OR
+  span 
+    =t "login.or"
 
 .row.login-links.text-center
   .col-xs-6
-    span Create Account
+    span 
+      =t "login.create_account"
     .icon
       fa-icon 'user-plus'
   .col-xs-6 style='cursor:pointer;'
     a click='authenticateWithFacebook'
-      span Log In with Facebook
+      span 
+        =t "login.login_facebook"
       .icon
         fa-icon 'facebook-official'
 
